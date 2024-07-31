@@ -1,0 +1,29 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/FiraCode-Bold.ttf",
+      "sha1": "24b55e102ed3cdee9b37a9b37331987e627aeca5"
+    },
+    {
+      "path": "assets/fonts/FiraCode-Light.ttf",
+      "sha1": "11bb86765760c07a06703b5573b1b388e154e112"
+    },
+    {
+      "path": "assets/fonts/FiraCode-Medium.ttf",
+      "sha1": "7d0a03414e6a0bd7c1d8d947c614b23f948393b6"
+    },
+    {
+      "path": "assets/fonts/FiraCode-Regular.ttf",
+      "sha1": "309c4873f18777e789cd49ef1c011c3ad2a675b4"
+    },
+    {
+      "path": "assets/fonts/FiraCode-SemiBold.ttf",
+      "sha1": "079f5d56a5303fedb6b98d0c12d8e6ae9abae483"
+    },
+    {
+      "path": "assets/fonts/FiraCode-VF.ttf",
+      "sha1": "386d739a91e2474364170c8ab95002f605137675"
+    }
+  ]
+}
