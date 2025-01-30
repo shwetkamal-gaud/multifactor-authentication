@@ -20,7 +20,7 @@ const StarterScreen = ({ navigation }: { navigation: any }) => {
             </View>
             <View style={{ display: 'flex', marginBottom: 10 }}>
 
-                <Button mode='contained' onPress={onButtonClick}> Let's Start</Button>
+                <Button mode='contained' onPress={onButtonClick}><Text>Let's Start</Text></Button>
             </View>
         </KeyboardAvoidingView>
 

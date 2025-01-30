@@ -30,7 +30,7 @@ import StarterScreen from './src/Screens/StarterScreen';
 import LoginScreen from './src/Screens/LoginScreen';
 import SignUpScreen from './src/Screens/SignUpScreen';
 import { PaperProvider } from 'react-native-paper';
-import MainPage from './src/Screens/MainPage';
+import MainPage from './src/Screens/M';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -47,7 +47,6 @@ function App(): React.JSX.Element {
 
   return (
     <PaperProvider>
-
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}
         >

@@ -59,7 +59,7 @@ class TOTP {
 const base32Chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
 
 function base32Decode(encoded: string) {
-    encoded = encoded.replace(/ /g, ''); // Remove spaces
+    encoded = encoded.replace(/ /g, ''); // 
     let decoded = [];
     let buffer = 0;
     let bitsLeft = 0;
@@ -68,7 +68,6 @@ function base32Decode(encoded: string) {
         const c = encoded[i];
         const value = base32Chars.indexOf(c.toUpperCase());
         if (value === -1) throw new Error("Invalid Base32 character");
-
         buffer = (buffer << 5) | value;
         bitsLeft += 5;
 

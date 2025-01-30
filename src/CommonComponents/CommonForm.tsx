@@ -1,5 +1,5 @@
 import React from "react"
-import { GestureResponderEvent, StyleSheet, View } from "react-native"
+import { GestureResponderEvent, NativeSyntheticEvent, StyleSheet, TextInputChangeEventData, View } from "react-native"
 import { Button, Text, TextInput } from "react-native-paper"
 
 
@@ -32,9 +32,9 @@ const CommonForm: React.FC<CommonFormProps> = ({ formJson, fieldData, handelSubm
                                         <View style={{ marginVertical: 10 }} key={childIndex} >
                                             {(bodyChild?.inputType === 'text' || bodyChild?.inputType === undefined) && (
                                                 <TextInput
-                                                    label={bodyChild?.label ?? ''}
-                                                    placeholder={bodyChild?.placeholder ?? ''}
-                                                    onChangeText={(text) => handleChangInput(bodyChild, text)}
+                                                    label={bodyChild?.label ?? null}
+                                                    placeholder={bodyChild?.placeholder ?? null}
+                                                    onChangeText={(text: string) => handleChangInput(bodyChild?.fieldName, text)}
                                                     value={fieldData && fieldData[bodyChild.fieldName]}
                                                     secureTextEntry={bodyChild?.isPassword ?? false}
                                                     mode="outlined"
@@ -48,7 +48,7 @@ const CommonForm: React.FC<CommonFormProps> = ({ formJson, fieldData, handelSubm
                                             {bodyChild?.inputType === 'button' && (
                                                 <View>
                                                     <Button mode={bodyChild?.mode ?? 'contained'} onPress={(e: GestureResponderEvent) => handleOnClick && handleOnClick(bodyChild, e)}>
-                                                        {bodyChild?.title}
+                                                        <Text>{bodyChild?.title}</Text>
                                                     </Button>
                                                 </View>
                                             )}
@@ -60,7 +60,7 @@ const CommonForm: React.FC<CommonFormProps> = ({ formJson, fieldData, handelSubm
                         {form?.sectionType === 'footer' && (
                             <View style={{ marginTop: 20 }}>
                                 <Button onPress={(e: GestureResponderEvent) => handelSubmit(e)} mode="contained">
-                                    {form?.title}
+                                    <Text>{form?.title}</Text>
                                 </Button>
                             </View>
                         )}

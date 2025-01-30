@@ -7,9 +7,10 @@ import CommonForm from '../CommonComponents/CommonForm'
 import { signUpForm } from '../CommonJson/SignUpJson'
 
 const SignUpScreen = ({ navigation }: { navigation: any }) => {
-    const [fieldData, setFieldData] = useState()
+    const [fieldData, setFieldData] = useState({})
     const handleChangInput = (field: any, e: any) => {
-
+        let data = fieldData
+        setFieldData({...data, field:e})
     }
     const handelSubmit = () => {
         navigation.navigate('Main')

@@ -2,19 +2,16 @@ import React, { useState } from 'react'
 import { Dimensions, KeyboardAvoidingView, StyleSheet, View } from 'react-native'
 import CommonForm from '../CommonComponents/CommonForm'
 import { loginForm } from '../CommonJson/LoginJson'
-import TOTP from '../TOTP_CODE/totp';
 
 const LoginScreen = ({ navigation }: { navigation: any }) => {
-    const [fieldData, setFieldData] = useState()
-    const { width } = Dimensions.get('window');
+    const [fieldData, setFieldData] = useState({})
+    // const { width } = Dimensions.get('window');
     const handleChangInput = (field: any, e: any) => {
-
+        let data = fieldData
+        setFieldData({...data, field,e})
     }
     const handelSubmit = () => {
-        //console.log(generateOTP('4mam saug w42d i3f6 fou2 o6k7 utox jpfw'))
-        const totp = new TOTP('n6ie upe5 62le xy4k feeq xi6j oi2v lpvj')
-        console.log(totp.value())
-        navigation.navigate('SignUp')
+        navigation.navigate('Main')
     }
     return (
         <KeyboardAvoidingView style={styles.mainContainer}>
